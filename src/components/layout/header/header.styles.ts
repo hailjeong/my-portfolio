@@ -8,6 +8,7 @@ interface ITextProps {
 export const Wrapper = styled.div`
   width: 100%;
   height: 100px;
+  padding-top: 20px;
   background-color: #dfdfdf;
   position: fixed;
   top: 0;

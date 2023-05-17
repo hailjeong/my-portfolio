@@ -10,7 +10,9 @@ const Header = () => {
 
   return (
     <S.Wrapper>
-      <S.Logo src="/logo.svg" alt="" />
+      <S.A href="/">
+        <S.Logo src="/logo.svg" alt="" />
+      </S.A>
 
       <S.ListWrapper isActive={isActive}>
         <S.UnorderedList>
