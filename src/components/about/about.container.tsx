@@ -1,15 +1,11 @@
-const About = () => {
-    return (
-        <>
-        <div style={{background: "grey", height: "500px"}}>    
-            about Page
-        </div>
+import AboutUI from "./about.presenter";
 
-        <div style={{background: "blue", height: "500px"}}>
-            123
-        </div>
-        </>
-    )
-}
+const About = () => {
+  return (
+    <>
+      <AboutUI />
+    </>
+  );
+};
 
 export default About;
