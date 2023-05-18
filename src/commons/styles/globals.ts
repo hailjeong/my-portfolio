@@ -1,19 +1,23 @@
-import {css} from '@emotion/react';
+import { css } from "@emotion/react";
 
 export const GlobalStyle = css`
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-a {
-  text-decoration: none;
-}
+  a {
+    text-decoration: none;
+  }
 
-li {
-  list-style-type: none;
-}
-`
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+`;
 
 export const breakPoints = {
   mobile: "(max-width:575px)",

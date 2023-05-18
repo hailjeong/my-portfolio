@@ -23,7 +23,7 @@ const Header = () => {
             <S.A href="/project">Project</S.A>
           </S.List>
           <S.List>
-            <S.A href="/contect">Contect</S.A>
+            <S.A href="/contact">Contact</S.A>
           </S.List>
         </S.UnorderedList>
       </S.ListWrapper>

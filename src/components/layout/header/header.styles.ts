@@ -56,7 +56,6 @@ export const ListWrapper = styled.div`
   }
 `;
 export const UnorderedList = styled.ul`
-  padding-left: 0px;
   display: flex;
   justify-content: space-around;
 

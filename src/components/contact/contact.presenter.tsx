@@ -1,4 +1,4 @@
-const ContectUI = () => {
+const ContactUI = () => {
   return (
     <>
       <div style={{ background: "grey", height: "500px" }}>ContectUI Page</div>
@@ -8,4 +8,4 @@ const ContectUI = () => {
   );
 };
 
-export default ContectUI;
+export default ContactUI;
