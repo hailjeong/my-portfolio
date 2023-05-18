@@ -12,9 +12,8 @@ const Home = () => {
 
       <S.Wrapper>
         <>
-          <div style={{ height: "500px" }}>ContectUI Page</div>
-
-          <div style={{ background: "blue", height: "500px" }}>123</div>
+          <div>홈 랜딩 페이지</div>
+          <div></div>
         </>
       </S.Wrapper>
     </>
