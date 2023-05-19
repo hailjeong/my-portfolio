@@ -13,7 +13,7 @@ const Home = () => {
 
       <S.FirstWrapper>
         <S.TitleWrapper>
-          <S.Title>Welcome Hail's Portfolio</S.Title>
+          <S.Title>Welcome Hail&apos;s Portfolio</S.Title>
         </S.TitleWrapper>
 
         <S.ImageWrapper>
@@ -31,9 +31,9 @@ const Home = () => {
               구현하는 프론트엔드 개발자로 성장하고자 합니다.
             </S.ImageDescription>
             <S.ImageDescription {...useScrollFadeIn("left", 1.5, 2)}>
-              3. "不怕慢，只怕站"이라는 중국 명언은 정말 멋진 명언이자 제가 제일
-              좋아하는 말입니다. 이 말은 느린 것을 두려워하지 말고 멈추는 것을
-              두려워해야 한다는 의미를 담고 있습니다.
+              3. &quot;不怕慢，只怕站&quot;이라는 중국 명언은 정말 멋진 명언이자
+              제가 제일 좋아하는 말입니다. 이 말은 느린 것을 두려워하지 말고
+              멈추는 것을 두려워해야 한다는 의미를 담고 있습니다.
             </S.ImageDescription>
           </S.ImageDescriptionWrapper>
           <S.DescriptionTabletMobileWrapper>
