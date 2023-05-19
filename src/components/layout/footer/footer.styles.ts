@@ -7,7 +7,7 @@ export const RootWrapper = styled.div`
   width: 100%;
   height: 200px;
   color: #000;
-  background-color: #bbb;
+  background-color: #dfdfdf;
   margin-top: auto;
 `;
 
@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
 export const InfoWrapper = styled.ul`
   height: 130px;
   font-size: 16px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,6 +61,7 @@ export const LinkWrapper = styled.section`
 export const A = styled.a`
   color: #000;
   margin-right: 30px;
+  font-weight: bold;
 `;
 
 export const GitHub = styled(GitHubIcon)`
@@ -83,6 +85,7 @@ export const MoveToContactWrapper = styled.div`
 
 export const MoveToContact = styled.a`
   color: #000;
+  font-weight: bold;
   padding-bottom: 5px;
   border-bottom: 1px solid transparent;
   transition: all 0.5s ease-in-out;

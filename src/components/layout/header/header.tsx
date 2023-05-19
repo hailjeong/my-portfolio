@@ -1,15 +1,32 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import * as S from "./header.styles";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const onScroll = () => {
+      const scrollY = window.pageYOffset;
+
+      setShowHeader(scrollY > lastScrollY ? false : true);
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+
+    window.addEventListener("scroll", onScroll);
+    console.log(showHeader);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [showHeader]);
 
   const onClickIcon = () => {
     setIsActive(!isActive);
   };
 
   return (
-    <S.Wrapper>
+    <S.Wrapper showHeader={showHeader}>
       <S.A href="/">
         <S.Logo src="/logo.svg" alt="" />
       </S.A>

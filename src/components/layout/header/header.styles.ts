@@ -3,8 +3,10 @@ import { breakPoints } from "../../../commons/styles/globals";
 import MenuIcon from "@mui/icons-material/Menu";
 
 interface ITextProps {
-  isActive: boolean;
+  showHeader?: boolean;
+  isActive?: boolean;
 }
+
 export const Wrapper = styled.div`
   width: 100%;
   height: 100px;
@@ -12,9 +14,11 @@ export const Wrapper = styled.div`
   background-color: #dfdfdf;
   position: fixed;
   top: 0;
-  display: flex;
+  left: 0;
+  display: ${(props: ITextProps) => (props.showHeader ? "flex" : "none")};
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 `;
 
 export const Logo = styled.img`
@@ -34,6 +38,7 @@ export const ListWrapper = styled.div`
     width: 100%;
     height: 100px;
     border-top: 1px solid #090909;
+    border-bottom: 1px solid #dfdfdf;
     background-color: ${(props: ITextProps) =>
       props.isActive ? "#090909" : "red"};
 
@@ -47,6 +52,7 @@ export const ListWrapper = styled.div`
     width: 100%;
     height: 100px;
     border-top: 1px solid #090909;
+    border-bottom: 1px solid #dfdfdf;
     background-color: ${(props: ITextProps) =>
       props.isActive ? "#090909" : "red"};
 
