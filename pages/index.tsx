@@ -57,7 +57,7 @@ const Home = () => {
         </S.ImageWrapper>
       </S.FirstWrapper>
 
-      <S.SecondWrapper>123</S.SecondWrapper>
+      <S.SecondWrapper></S.SecondWrapper>
     </>
   );
 };
