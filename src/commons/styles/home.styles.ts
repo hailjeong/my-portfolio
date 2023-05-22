@@ -12,6 +12,7 @@ export const FirstWrapper = styled.div`
   color: #fff;
   background-color: #000;
 `;
+
 export const TitleWrapper = styled.div`
   padding-bottom: 50px;
 
@@ -130,29 +131,34 @@ export const IconLaunch = styled(LaunchIcon)`
   margin-right: 10px;
 `;
 
-export const DescriptionTablet = styled.a`
-  display: none;
+export const MoveToAboutPage = styled.a`
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 1px solid #dfdfdf;
 
   @media ${breakPoints.tablet} {
-    padding-bottom: 15px;
-    display: block;
-    font-size: 23px;
-    font-weight: bold;
-    color: #fff;
-    border-bottom: 1px solid #dfdfdf;
+    font-size: 26px;
   }
-`;
-
-export const DescriptionMobile = styled.a`
-  display: none;
 
   @media ${breakPoints.mobile} {
     width: 400px;
-    padding-bottom: 15px;
-    display: block;
     font-size: 21px;
-    font-weight: bold;
     color: #fff;
-    border-bottom: 1px solid #dfdfdf;
   }
+`;
+
+export const SecondWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  border-top: 3px solid #dfdfdf;
 `;
