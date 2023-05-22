@@ -22,6 +22,12 @@ const Home = () => {
             {...useScrollFadeIn("right", 1.5, 0)}
           />
           <S.ImageDescriptionWrapper>
+            <S.ImageDescription {...useScrollFadeIn("left", 1.5, 4)}>
+              <S.MoveToAboutPage href="/about">
+                <S.IconLaunch />
+                프론트엔드 개발자를 선택한 이유는 ?
+              </S.MoveToAboutPage>
+            </S.ImageDescription>
             <S.ImageDescription {...useScrollFadeIn("left", 1.5, 1)}>
               1. 웹 사이트를 통해 제 아이디어가 현실로 탄생해나가는 과정을
               지켜보는 것은 저에게 큰 재미입니다. 그 과정에서 저는 끊임없는
@@ -37,13 +43,6 @@ const Home = () => {
               3. &quot;不怕慢，只怕站&quot;이라는 중국 명언은 정말 멋진 명언이자
               제가 제일 좋아하는 말입니다. 이 말은 느린 것을 두려워하지 말고
               멈추는 것을 두려워해야 한다는 의미를 담고 있습니다.
-            </S.ImageDescription>
-
-            <S.ImageDescription {...useScrollFadeIn("left", 1.5, 3)}>
-              <S.MoveToAboutPage href="/about">
-                <S.IconLaunch />
-                프론트엔드 개발자를 선택한 이유는 ?
-              </S.MoveToAboutPage>
             </S.ImageDescription>
           </S.ImageDescriptionWrapper>
 

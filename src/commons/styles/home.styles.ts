@@ -132,7 +132,6 @@ export const IconLaunch = styled(LaunchIcon)`
 `;
 
 export const MoveToAboutPage = styled.a`
-  padding-top: 15px;
   padding-bottom: 15px;
   display: block;
   font-size: 18px;
