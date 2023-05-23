@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
 import { breakPoints } from "./globals";
 import LaunchIcon from "@mui/icons-material/Launch";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 export const FirstWrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -75,7 +77,7 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const FirstImage = styled.img`
   width: 400px;
   height: 400px;
   margin-right: 50px;
@@ -151,13 +153,77 @@ export const MoveToAboutPage = styled.a`
 `;
 
 export const SecondWrapper = styled.div`
-  width: 100%;
-  height: 100vh;
-  padding-top: 100px;
+  width: 100vw;
+
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #fff;
   background-color: #000;
-  border-top: 3px solid #dfdfdf;
+  position: relative;
+`;
+
+export const SecondImage = styled.img`
+  width: 600px;
+
+  @media ${breakPoints.tablet} {
+    width: 500px;
+    height: 300px;
+  }
+
+  @media ${breakPoints.mobile} {
+    width: 400px;
+    height: 300px;
+  }
+`;
+
+export const ProjectListWrapper = styled.div`
+  width: 70%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+
+  @media ${breakPoints.mobile} {
+    width: 80%;
+  }
+`;
+
+export const ProjectList = styled.ul`
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+`;
+export const ProjectListItem = styled.li<{ activeIndex: number }>`
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+  transform: translateX(-${({ activeIndex }) => activeIndex * 100}%);
+`;
+
+export const ProjectListItemImage = styled.img`
+  width: 400px;
+
+  @media ${breakPoints.tablet} {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media ${breakPoints.mobile} {
+    width: 300px;
+    height: 200px;
+  }
+`;
+
+export const NextIcon = styled(ArrowForwardIosIcon)`
+  cursor: pointer;
+  margin-left: 20px;
+`;
+export const PrevIcon = styled(ArrowBackIosNewIcon)`
+  cursor: pointer;
+  margin-right: 20px;
 `;

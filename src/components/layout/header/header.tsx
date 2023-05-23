@@ -16,7 +16,6 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", onScroll);
-    console.log(showHeader);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [showHeader]);

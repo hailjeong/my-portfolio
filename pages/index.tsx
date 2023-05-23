@@ -1,8 +1,48 @@
+import { useState } from "react";
 import Head from "next/head";
 import * as S from "../src/commons/styles/home.styles";
 import useScrollFadeIn from "../src/commons/hooks/useScrollFadeIn";
+// import { Modal, Button } from "antd";
+import Modal from "../src/commons/modal/modal";
+
+const LIST_IMAGE = [
+  "/landingPage/project_list02.png",
+  "/landingPage/project_list01.png",
+  "/landingPage/project_list.png",
+  "4",
+];
 
 const Home = () => {
+  const [number, setNumber] = useState(0);
+  const [isModal, setIsModal] = useState(false);
+
+  const onClickPrevButton = () => {
+    if (number === 0) {
+      setIsModal(!isModal);
+      return;
+    } else {
+      setNumber((prev) => prev - 1);
+      console.log(number);
+    }
+  };
+
+  const onClickNextButton = () => {
+    if (number === LIST_IMAGE.length - 1) {
+      setNumber(0);
+    } else {
+      setNumber(number + 1);
+      console.log(number);
+    }
+  };
+
+  const onClickOkButton = () => {
+    setIsModal(!isModal);
+  };
+
+  const onClickCancleButton = () => {
+    setIsModal(!isModal);
+  };
+
   return (
     <>
       <Head>
@@ -17,29 +57,29 @@ const Home = () => {
         </S.TitleWrapper>
 
         <S.ImageWrapper>
-          <S.Image
+          <S.FirstImage
             src="/landingPage/landing01.png"
-            {...useScrollFadeIn("right", 1.5, 0)}
+            {...useScrollFadeIn("left", 1.5, 0)}
           />
           <S.ImageDescriptionWrapper>
-            <S.ImageDescription {...useScrollFadeIn("left", 1.5, 4)}>
+            <S.ImageDescription {...useScrollFadeIn("right", 1.5, 1)}>
               <S.MoveToAboutPage href="/about">
                 <S.IconLaunch />
                 프론트엔드 개발자를 선택한 이유는 ?
               </S.MoveToAboutPage>
             </S.ImageDescription>
-            <S.ImageDescription {...useScrollFadeIn("left", 1.5, 1)}>
+            <S.ImageDescription {...useScrollFadeIn("right", 1.5, 2)}>
               1. 웹 사이트를 통해 제 아이디어가 현실로 탄생해나가는 과정을
               지켜보는 것은 저에게 큰 재미입니다. 그 과정에서 저는 끊임없는
               창의성과 열정으로 일하며 새로운 아이디어를 발전시키고 구현해
               나갑니다.
             </S.ImageDescription>
-            <S.ImageDescription {...useScrollFadeIn("left", 1.5, 2)}>
+            <S.ImageDescription {...useScrollFadeIn("right", 1.5, 3)}>
               2. 아이디어는 구현되지 않으면 그 빛을 발휘하지 못합니다. 저는 항상
               새로운 것을 탐구하고 배우며, 이를 기반으로 아이디어를 현실로
               구현하는 프론트엔드 개발자로 성장하고자 합니다.
             </S.ImageDescription>
-            <S.ImageDescription {...useScrollFadeIn("left", 1.5, 3)}>
+            <S.ImageDescription {...useScrollFadeIn("right", 1.5, 4)}>
               3. &quot;不怕慢，只怕站&quot;이라는 중국 명언은 정말 멋진 명언이자
               제가 제일 좋아하는 말입니다. 이 말은 느린 것을 두려워하지 말고
               멈추는 것을 두려워해야 한다는 의미를 담고 있습니다.
@@ -56,7 +96,33 @@ const Home = () => {
         </S.ImageWrapper>
       </S.FirstWrapper>
 
-      <S.SecondWrapper></S.SecondWrapper>
+      <S.SecondWrapper>
+        {isModal && (
+          <Modal
+            isModal={isModal}
+            onClickOkButton={onClickOkButton}
+            onClickCancleButton={onClickCancleButton}
+            title={"안내사항"}
+            content={"첫 번째 사진입니다."}
+          />
+        )}
+        <S.SecondImage
+          src="/landingPage/project_list02.png"
+          {...useScrollFadeIn("up", 1.5, 0)}
+        />
+
+        <S.ProjectListWrapper>
+          <S.PrevIcon onClick={onClickPrevButton} />
+          <S.ProjectList>
+            {LIST_IMAGE.map((el, index) => (
+              <S.ProjectListItem key={index} activeIndex={number}>
+                <S.ProjectListItemImage src={el} />
+              </S.ProjectListItem>
+            ))}
+          </S.ProjectList>
+          <S.NextIcon onClick={onClickNextButton} />
+        </S.ProjectListWrapper>
+      </S.SecondWrapper>
     </>
   );
 };

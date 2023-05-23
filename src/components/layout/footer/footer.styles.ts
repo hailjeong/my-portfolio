@@ -4,7 +4,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { breakPoints } from "../../../commons/styles/globals";
 
 export const RootWrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 200px;
   color: #000;
   background-color: #dfdfdf;
@@ -62,10 +62,13 @@ export const A = styled.a`
   color: #000;
   margin-right: 30px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 `;
 
 export const GitHub = styled(GitHubIcon)`
   font-size: 35px;
+  margin-right: 10px;
 
   @media ${breakPoints.mobile} {
     font-size: 30px;
@@ -73,6 +76,7 @@ export const GitHub = styled(GitHubIcon)`
 `;
 export const StudyBook = styled(MenuBookIcon)`
   font-size: 35px;
+  margin-right: 10px;
 
   @media ${breakPoints.mobile} {
     font-size: 30px;
