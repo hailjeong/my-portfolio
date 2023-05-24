@@ -3,6 +3,7 @@ import Header from "./header/header";
 import styled from "@emotion/styled";
 import Footer from "./footer/footer";
 import { breakPoints } from "../../commons/styles/globals";
+import ScrollToTop from "../../commons/scroll/scrollToTop";
 
 interface ILayout {
   children: ReactNode;
@@ -23,7 +24,10 @@ const Layout = (props: ILayout) => {
   return (
     <Wrapper>
       <Header />
-      <ChildrenStyle>{props.children}</ChildrenStyle>
+      <ChildrenStyle>
+        <ScrollToTop />
+        {props.children}
+      </ChildrenStyle>
       <Footer />
     </Wrapper>
   );
